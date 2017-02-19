@@ -90,7 +90,7 @@ class VideoViewController: UIViewController {
         
         
     
-        let filePath = "fire.mov"
+        let filePath = "newfire.mov"
         // [START uploadimage]
         storageRef.child(filePath)
             .putFile(localFile, metadata: nil) { (metadata, error) in
@@ -101,8 +101,8 @@ class VideoViewController: UIViewController {
         }
     
         
-        let newVC = VideoViewController(videoURL: url)
-        self.present(newVC, animated: true, completion: nil)
+//        let newVC = VideoViewController()
+//        self.present(newVC, animated: true, completion: nil)
     
         
         

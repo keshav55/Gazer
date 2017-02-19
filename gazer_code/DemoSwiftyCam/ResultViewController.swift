@@ -8,3 +8,12 @@
 
 import UIKit
 import FirebaseStorage
+
+class ResultViewController: UIViewController {
+    
+    
+    
+
+
+
+}
