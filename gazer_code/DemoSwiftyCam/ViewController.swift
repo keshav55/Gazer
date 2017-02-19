@@ -15,6 +15,7 @@
 
 
 import UIKit
+import FirebaseStorage
 
 class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
     
@@ -28,6 +29,7 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         maximumVideoDuration = 10.0
         addButtons()
         flashEnabled = true;
+        
     }
     
     override var prefersStatusBarHidden: Bool {

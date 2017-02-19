@@ -21,6 +21,10 @@
 		168505EA1E288D80005B4537 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168505E91E288D80005B4537 /* PhotoViewController.swift */; };
 		211A08AD1E5931DA00F252DB /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211A08AC1E5931DA00F252DB /* FirebaseStorage.framework */; };
 		211A08AF1E5931E000F252DB /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211A08AE1E5931E000F252DB /* GTMSessionFetcher.framework */; };
+		21DFBDA21E598C8400C2B008 /* Firebase.h in Sources */ = {isa = PBXBuildFile; fileRef = 211A08AB1E59307300F252DB /* Firebase.h */; };
+		21DFBDA41E59914B00C2B008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DFBDA31E59914B00C2B008 /* GoogleService-Info.plist */; };
+		21DFBDA61E59CCE400C2B008 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFBDA51E59CCE400C2B008 /* ResultViewController.swift */; };
+		7B1EC24AC8FFCCB91F9B2B1A /* Pods_Gazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB6A2123398C5FBAB48AFDF /* Pods_Gazer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,8 @@
 		211A08AB1E59307300F252DB /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		211A08AC1E5931DA00F252DB /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = "<group>"; };
 		211A08AE1E5931E000F252DB /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		21DFBDA31E59914B00C2B008 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21DFBDA51E59CCE400C2B008 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		98EBF1AE022A4920B67A2881 /* Pods-Gazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gazer/Pods-Gazer.release.xcconfig"; sourceTree = "<group>"; };
 		B44205AC0DDC4D98B83B49F0 /* Pods-Gazer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gazer/Pods-Gazer.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB6A2123398C5FBAB48AFDF /* Pods_Gazer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +61,7 @@
 			files = (
 				211A08AF1E5931E000F252DB /* GTMSessionFetcher.framework in Frameworks */,
 				211A08AD1E5931DA00F252DB /* FirebaseStorage.framework in Frameworks */,
+				7B1EC24AC8FFCCB91F9B2B1A /* Pods_Gazer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,11 +91,14 @@
 		1675A9741E00A68300B80903 /* DemoSwiftyCam */ = {
 			isa = PBXGroup;
 			children = (
+				211A08AB1E59307300F252DB /* Firebase.h */,
+				21DFBDA31E59914B00C2B008 /* GoogleService-Info.plist */,
 				1675A9911E00A74F00B80903 /* Source */,
 				1675A9751E00A68300B80903 /* AppDelegate.swift */,
 				1675A9771E00A68300B80903 /* ViewController.swift */,
 				16298B551E2703DC0056D413 /* SwiftyRecordButton.swift */,
 				168505E71E288B4C005B4537 /* VideoViewController.swift */,
+				21DFBDA51E59CCE400C2B008 /* ResultViewController.swift */,
 				168505E91E288D80005B4537 /* PhotoViewController.swift */,
 				1675A9791E00A68300B80903 /* Main.storyboard */,
 				1675A97C1E00A68300B80903 /* Assets.xcassets */,
@@ -101,7 +111,6 @@
 		1675A9911E00A74F00B80903 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				211A08AB1E59307300F252DB /* Firebase.h */,
 				1675A9891E00A74A00B80903 /* PreviewView.swift */,
 				1675A98A1E00A74A00B80903 /* SwiftyCamButton.swift */,
 				1675A98B1E00A74A00B80903 /* SwiftyCamViewController.swift */,
@@ -136,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1675A9841E00A68300B80903 /* Build configuration list for PBXNativeTarget "Gazer" */;
 			buildPhases = (
+				FE5A0FF6D51DCC12E33AB5A0 /* [CP] Check Pods Manifest.lock */,
 				1675A96E1E00A68300B80903 /* Sources */,
 				1675A96F1E00A68300B80903 /* Frameworks */,
 				1675A9701E00A68300B80903 /* Resources */,
+				89005716094F06581ACA8353 /* [CP] Embed Pods Frameworks */,
+				9327C6F9D77EE072979814FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1675A9801E00A68300B80903 /* LaunchScreen.storyboard in Resources */,
+				21DFBDA41E59914B00C2B008 /* GoogleService-Info.plist in Resources */,
 				1675A97D1E00A68300B80903 /* Assets.xcassets in Resources */,
 				1675A97B1E00A68300B80903 /* Main.storyboard in Resources */,
 			);
@@ -197,11 +210,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89005716094F06581ACA8353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gazer/Pods-Gazer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9327C6F9D77EE072979814FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gazer/Pods-Gazer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5A0FF6D51DCC12E33AB5A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1675A96E1E00A68300B80903 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DFBDA21E598C8400C2B008 /* Firebase.h in Sources */,
 				1675A9781E00A68300B80903 /* ViewController.swift in Sources */,
 				1675A9901E00A74A00B80903 /* SwiftyCamViewControllerDelegate.swift in Sources */,
 				168505E81E288B4C005B4537 /* VideoViewController.swift in Sources */,
@@ -211,6 +273,7 @@
 				16298B561E2703DC0056D413 /* SwiftyRecordButton.swift in Sources */,
 				1675A98D1E00A74A00B80903 /* PreviewView.swift in Sources */,
 				1675A98E1E00A74A00B80903 /* SwiftyCamButton.swift in Sources */,
+				21DFBDA61E59CCE400C2B008 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +405,12 @@
 				INFOPLIST_FILE = DemoSwiftyCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kvr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 			};
 			name = Debug;
 		};
@@ -361,9 +427,11 @@
 				INFOPLIST_FILE = DemoSwiftyCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kvr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

@@ -16,6 +16,8 @@
 import UIKit
 import AVFoundation
 import AVKit
+import FirebaseStorage
+import FirebaseAuth
 
 import Photos
 
@@ -42,6 +44,7 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
+        
         player = AVPlayer(url: videoURL)
         playerController = AVPlayerViewController()
         
@@ -77,16 +80,50 @@ class VideoViewController: UIViewController {
     
     func save() {
         
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.videoURL)
-        }) { saved, error in
-            if saved {
-                let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
-            }
+     
+        
+        let storage = FIRStorage.storage()
+        let storageRef = storage.reference()
+        
+        
+        let localFile = videoURL
+        
+        
+    
+        let filePath = "fire.mov"
+        // [START uploadimage]
+        storageRef.child(filePath)
+            .putFile(localFile, metadata: nil) { (metadata, error) in
+                if let error = error {
+                    print("Error uploading: \(error)")
+                    return
+                }
         }
+    
+        
+        let newVC = VideoViewController(videoURL: url)
+        self.present(newVC, animated: true, completion: nil)
+    
+        
+        
+        
+       
+        
+        
+        
+//        
+//        PHPhotoLibrary.shared().performChanges({
+//            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.videoURL)
+//        }) { saved, error in
+//            if saved {
+//                let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
+//                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                alertController.addAction(defaultAction)
+//                self.present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//        
+        
         
         
         
